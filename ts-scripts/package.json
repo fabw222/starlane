@@ -1,0 +1,23 @@
+{
+  "name": "starlane-ts-scripts",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "register": "tsx register-gate.ts",
+    "buy": "tsx buy-jump-permit.ts",
+    "withdraw": "tsx withdraw-revenue.ts",
+    "smoke": "tsx smoke-test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mysten/sui": "1.24.0",
+    "dotenv": "16.4.7",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "22.18.11",
+    "tsx": "4.20.5",
+    "typescript": "5.9.2"
+  }
+}

@@ -1,0 +1,9 @@
+[package]
+name = "starlane"
+edition = "2024"
+
+[dependencies]
+world_contracts = { local = "../move-deps/world-contracts" }
+
+[addresses]
+starlane = "0x0"

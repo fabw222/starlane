@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg: #041019;
+  --panel: rgba(10, 27, 38, 0.86);
+  --panel-strong: rgba(13, 35, 49, 0.94);
+  --line: rgba(106, 247, 242, 0.16);
+  --line-strong: rgba(106, 247, 242, 0.38);
+  --text: #edf7fb;
+  --muted: #8aa7b6;
+  --accent: #6af7f2;
+  --accent-warm: #ffb454;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top, rgba(106, 247, 242, 0.12), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(255, 180, 84, 0.14), transparent 32%),
+    linear-gradient(180deg, #07131d 0%, #041019 42%, #030b12 100%);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--text);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02)),
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: auto, 56px 56px, 56px 56px;
+  font-family: var(--font-body), sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+::selection {
+  color: #021016;
+  background: rgba(106, 247, 242, 0.72);
+}
+
+.panel {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(13, 35, 49, 0.86), rgba(5, 18, 26, 0.92));
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+}
+
+.panel-soft {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(9, 22, 32, 0.66);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.tech-label {
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--accent);
+}
+
+.display-font {
+  font-family: var(--font-display), sans-serif;
+}
+
+.input-shell {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid rgba(137, 167, 183, 0.24);
+  background: rgba(2, 12, 19, 0.88);
+  color: var(--text);
+  padding: 0.9rem 1rem;
+  transition: border-color 160ms ease, transform 160ms ease, background 160ms ease;
+}
+
+.input-shell:focus {
+  outline: none;
+  border-color: rgba(106, 247, 242, 0.7);
+  background: rgba(4, 18, 27, 0.96);
+}
+
+input.input-shell:focus {
+  transform: translateY(-1px);
+}
+
+.shell-select-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  margin-top: 0.35rem;
+  max-height: 12.5rem;
+  overflow-y: auto;
+  border-radius: 1rem;
+  border: 1px solid var(--line-strong);
+  background: var(--panel-strong);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+  list-style: none;
+  padding: 0.35rem;
+}
+
+.shell-select-option {
+  padding: 0.7rem 1rem;
+  border-radius: 0.65rem;
+  cursor: pointer;
+  color: var(--muted);
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.shell-select-option:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+}
+
+.shell-select-option[aria-selected="true"] {
+  color: var(--accent);
+}
+
+.action-button {
+  border-radius: 999px;
+  border: 1px solid rgba(106, 247, 242, 0.44);
+  background: linear-gradient(135deg, rgba(106, 247, 242, 0.22), rgba(10, 32, 43, 0.92));
+  padding: 0.8rem 1.2rem;
+  color: var(--text);
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.action-button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(106, 247, 242, 0.9);
+}
+
+.action-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
+}
+
+.ghost-button {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 0.7rem 1rem;
+  color: var(--text);
+}
+

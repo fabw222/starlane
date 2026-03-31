@@ -1,0 +1,45 @@
+# Dependencies
+node_modules
+
+# Build outputs
+.next
+dist
+coverage
+*.tsbuildinfo
+
+# Sui Move build artifacts
+contract/build
+move-deps/*/build
+contract/Move.lock
+
+# Turbo & Vercel
+.turbo
+.vercel
+
+# Environment variables
+.env
+.env.local
+web/.env
+ts-scripts/.env
+
+# Generated files
+web/generated
+web/prisma/dev.db
+
+# Runtime / operational artifacts
+plans/
+queue/
+runs/
+state/
+
+# Review and promo artifacts
+review/
+promo/
+
+# Logs
+*.log
+*.key
+**/Pub.*.toml
+
+# OS
+.DS_Store

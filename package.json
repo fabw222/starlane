@@ -1,0 +1,18 @@
+{
+  "name": "starlane-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "web",
+    "ts-scripts"
+  ],
+  "scripts": {
+    "dev": "cd web && npm run dev",
+    "build": "cd web && npm run build",
+    "web:test": "cd web && npm test",
+    "scripts:typecheck": "cd ts-scripts && npm run typecheck",
+    "smoke:testnet": "cd ts-scripts && npm run smoke",
+    "move:test": "cd contract && sui move test",
+    "move:build": "cd contract && sui move build"
+  }
+}

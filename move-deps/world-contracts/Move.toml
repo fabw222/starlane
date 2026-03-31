@@ -1,0 +1,8 @@
+[package]
+name = "world_contracts"
+edition = "2024"
+published-at = "0xd12a70c74c1e759445d6f209b01d43d860e97fcf2ef72ccbbd00afd828043f75"
+
+[addresses]
+world = "0xd12a70c74c1e759445d6f209b01d43d860e97fcf2ef72ccbbd00afd828043f75"
+
